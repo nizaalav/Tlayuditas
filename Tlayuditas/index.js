@@ -12,7 +12,7 @@ app.get('/', (req, res) =>{
 })
 
 app.get('/clientes', (req, res) =>{
-  res.send('what are you doing?')
+  res.send('puede levantar mi pedido?')
 })
 
 routerApi(app)

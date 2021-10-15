@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const Pedidos = require('../models/pedidos')
+const Menu = require('../models/menu')
 
 router.get('/',  (req, res) =>{
     try{
@@ -14,3 +14,4 @@ router.get('/',  (req, res) =>{
 })
 
 module.exports = router
+

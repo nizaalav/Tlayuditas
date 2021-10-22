@@ -1,11 +1,11 @@
-const routerApi = require('./routers')
+ const routerApi = require('./routers')
 const express = require('express')
 const app = express()
 const { config } =require('./config/index')
 const { checkApikey } = require('./middleware/auth.handler')
 const passport = require('passport')
 
-app.use(passport.initialize)
+app.use(passport.initialize())
 const port = config.port
 
 const mongoose = require ('mongoose')
@@ -14,7 +14,7 @@ const PASSWORD = encodeURIComponent(config.dbPassword)
 const DB_NAME = encodeURIComponent(config.dbName)
 const MONGO_URI = `mongodb+srv://${USER}:${PASSWORD}@${config.dbHost}/${DB_NAME}?retryWrites=true&w=majority`
 
-console.log('****************')
+console.log('******')
 console.log(MONGO_URI)
 mongoose.connect(MONGO_URI,
   {useNewUrlParser:true, useUnifiedTopology: true}

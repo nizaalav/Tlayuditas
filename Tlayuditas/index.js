@@ -2,7 +2,10 @@ const routerApi = require('./routers')
 const express = require('express')
 const app = express()
 const { config } =require('./config/index')
+const { checkApikey } = require('./middleware/auth.handler')
+const passport = require('passport')
 
+app.use(passport.initialize)
 const port = config.port
 
 const mongoose = require ('mongoose')
@@ -18,12 +21,13 @@ mongoose.connect(MONGO_URI,
   ).then(() => console.log('Ya estamos  conectados.yujuuu!')).catch(e=>console.log(e))
 
 
+require('./utils/auth')
 
   app.get('/', (req, res) =>{
    res.send('Bienvenidos a Tlayuditas Daniz js')
  })
 
- app.get('/otra-ruta', (req, res) =>{
+ app.get('/otra-ruta', checkApikey, (req, res) =>{
   res.send('Espero que sean de tu agrado')
 })
 

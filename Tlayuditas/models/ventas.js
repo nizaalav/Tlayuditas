@@ -4,7 +4,9 @@ const Schema = mongoose.Schema
 const ventasSchema = new Schema({
   name: 'String',
   date: {type: String, default: ''},
-  description: {type: String, default: ''},
+  description: {type: String, default: 'Tlayuditas Daniz'},
+  totalingresos: {type: Number,lowercase: true, default:'......'}
+
 
 
 })

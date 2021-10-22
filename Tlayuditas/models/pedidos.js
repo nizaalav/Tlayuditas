@@ -3,12 +3,12 @@ const Schema = mongoose.Schema
 
 const pedidosSchema = new Schema({
 
-  
+
   phone: { type: String, default: '9712657084'},
   date:{ type: String},
   email: {required: true, type: String, lowercase: true, trim: true, unique: true},
   location: {type: String, lowercase: true, trim: true, default: 'Coatzacoalcos, Ver.'},
-  recommendation:{type: String, lowercase: true, trim: true, default: 'Muy Buenas, Sin Duda Volveria a Comerlas!'},
+  order: {type: String, lowercase: true, trim: true, default: 'Quisiera ordenar'},
 
 
 

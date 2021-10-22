@@ -2,7 +2,7 @@ const menuRouters = require('./menu')
 const usuarioRouters = require('./usuario')
 const ventasRouters = require('./ventas')
 const pedidosRouters = require('./pedidos')
-//const clientesRouters = require('./clientes')
+const { checkApiKey } = require('./middleware/auth.handler')
 
 function routerApi(app){
   app.use('/menu', menuRouters)

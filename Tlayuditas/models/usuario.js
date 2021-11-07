@@ -10,10 +10,7 @@ const usuarioSchema = new Schema({
   email: {required: true, type: String, lowercase: true, trim: true, unique: true},
   location: {type: String, lowercase: true, trim: true, default: 'Coatzacoalcos, Ver.'},
   recommendation:{type: String, lowercase: true, trim: true, default: 'Muy Buenas, Sin Duda Volveria a Comerlas!'},
-
-
-
-
+  password: {require: true, type: String}
 },{
   timestamps: true
 })

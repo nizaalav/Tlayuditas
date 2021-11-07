@@ -3,19 +3,17 @@ const Schema = mongoose.Schema
 
 const pedidosSchema = new Schema({
 
-
-  phone: { type: String, default: '9712657084'},
-  date:{ type: String},
-  email: {required: true, type: String, lowercase: true, trim: true, unique: true},
-  location: {type: String, lowercase: true, trim: true, default: 'Coatzacoalcos, Ver.'},
-  order: {type: String, lowercase: true, trim: true, default: 'Quisiera ordenar'},
-
-
-
+     name: 'String',
+     fecha: Date,
+     lastname: { type: String, default: '' },
+     address: { type: String,lowercase: true, trim: true, default: 'coatzacoalcos' },
+     phone: { type: Number, default: '' },
+     precio: {type: Number, default: ' 75 , costo , comida'},
+     email: {require: true, type: String, lowercase:true, trim: true, unique:true}
 
 },{
-  timestamps: true
+     timestamps: true
 })
 
-const Pedidos= mongoose.model('Pedidos', pedidosSchema)
-module.exports = Pedidos
+const pedidos = mongoose.model('Pedidos', pedidosSchema)
+module.exports = pedidos

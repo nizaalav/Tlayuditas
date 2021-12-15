@@ -1,20 +1,20 @@
-const Usuario = require('../../models/usuario');
+const productos = require('../../models/productos');
 
-async function deleteUsuario({ email }) {
+async function deleteProduct({ _id }) {
      try {
-          const userDeleted = await Usuario.deleteOne({ email });
+          const userDeleted = await productos.deleteOne({ _id });
           if (userDeleted.deletedCount == 0)
                return {
                     userDeleted: userDeleted.deletedCount,
-                    message: 'usuario no encontrado',
+                    message: 'producto no encontrado',
                };
           else
                return {
                     userDeleted: userDeleted.deletedCount,
-                    message: 'Usuario eliminado',
+                    message: 'producto eliminado',
                };
      } catch (error) {
           return { message: error.message };
      }
 }
-module.exports = { deleteUsuario };
+module.exports = { deleteProduct };

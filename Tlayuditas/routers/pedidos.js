@@ -1,29 +1,29 @@
 const express = require('express')
 const passport = require('passport')
 const router = express.Router()
-const {ctrlSelectProveedor} = require('../controllers/proveedor/ctrlselectproveedor')
-const {ctrlUpdateProveedor} = require('../controllers/proveedor/ctrlUpdateproveedor')
-const {ctrlCreateProveedor} = require('../controllers/proveedor/ctrlCreateproveedor')
-const {ctrlDeleteProveedor} = require('../controllers/proveedor/ctrlDeleteproveedor')
+const {ctrlSelectpedidos} = require('../controllers/pedidos/ctrlselectPedidos')
+const {ctrlUpdatepedidos} = require('../controllers/pedidos/ctrlUpdatePedidos')
+const { ctrlCreatepedidos} = require('../controllers/pedidos/ctrlCreatePedidos')
+const {ctrlDeletepedidos} = require('../controllers/pedidos/ctrlDeletePedidos')
 
 router.get('/',
 passport.authenticate('jwt', {session: false}),
-ctrlSelectProveedor
+ctrlSelectpedidos
 )
 
 router.post('/',
 passport.authenticate('jwt', {session: false}),
-ctrlCreateProveedor
+ctrlCreatepedidos
 )
 
 router.put('/:email',
 passport.authenticate('jwt', {session: false}),
-ctrlUpdateProveedor
+ctrlUpdatepedidos
 )
 
 router.delete('/:email',
 passport.authenticate('jwt', {session: false}),
-ctrlDeleteProveedor
+ctrlDeletepedidos
 )
 
 

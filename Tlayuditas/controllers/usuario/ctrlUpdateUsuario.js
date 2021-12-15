@@ -1,4 +1,4 @@
-const { updateUsuario } = require("../../services/usuarios/updateUsuario")
+const { updateUsuario } = require("../../services/usuario/UpdateUsuario")
 
 async function ctrlUpdateUsuario(req, res){
 try{

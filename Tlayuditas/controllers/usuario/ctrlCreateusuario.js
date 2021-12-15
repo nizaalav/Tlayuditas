@@ -1,4 +1,4 @@
-const { createUsuario } = require('../../services/usuarios/createUsuario');
+const { createUsuario } = require('../../services/usuario/createUsuario');
 const bcrypt = require('bcrypt')
 async function ctrlCreateUsuario(req, res) {
      try {

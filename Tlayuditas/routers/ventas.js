@@ -4,7 +4,7 @@ const router = express.Router()
 const {ctrlSelectVentas} = require('../controllers/ventas/ctrlselectventas')
 const {ctrlUpdateVentas} = require('../controllers/ventas/ctrlUpdateventas')
 const {ctrlCreateVentas} = require('../controllers/ventas/ctrlCreateventas')
-const {ctrlDeleteVentas} = require('../controllers/ventas/ctrlDeleteventas')
+const {ctrlDeleteventas} = require('../controllers/ventas/ctrlDeleteventas')
 
 router.get('/',
 passport.authenticate('jwt', {session: false}),
@@ -23,7 +23,7 @@ ctrlUpdateVentas
 
 router.delete('/:email',
 passport.authenticate('jwt', {session: false}),
-ctrlDeleteVentas
+ctrlDeleteventas
 )
 
 

@@ -1,4 +1,4 @@
-const { deleteUsuario } = require("../../services/usuarios/deleteUsuario")
+const { deleteUsuario } = require("../../services/usuario/deleteUsuario")
 
 async function ctrlDeleteUsuario(req, res){
 try{

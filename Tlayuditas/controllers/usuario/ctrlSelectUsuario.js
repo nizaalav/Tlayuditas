@@ -1,4 +1,4 @@
-const { selectUsuario } = require("../../services/usuarios/selectUsuario")
+const { selectUsuario } = require("../../services/usuario/selectUsuario")
 
 async function ctrlSelectUsuario(req, res){
 try{

@@ -1,5 +1,5 @@
 const express = require('express')
-const routerApi = require('./routes')
+const routerApi = require('./routers')
 const app = express()
 const { config } = require('./config/index')
 const { checkApiKey }= require('./middleware/auth.handler')

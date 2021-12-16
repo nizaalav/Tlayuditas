@@ -31,15 +31,15 @@ mongoose.connect(MONGO_URI,
 require('./utils/auth')
 
 app.get('/', (req, res) =>{
-  res.send('Welcome to our local soccer app')
+  res.send('Bienvenidos a tlayuditas Daniz ')
 })
 
-app.get('/futbol', checkApiKey, (req, res) =>{
-  res.send('Ourr app is going to be the best')
+app.get('/', checkApiKey, (req, res) =>{
+  res.send('tlayudas 100% oaxaqueñas')
 })
 
-app.get('/clientes', (req, res) =>{
-  res.send('games22')
+app.get('/', (req, res) =>{
+  res.send('')
 })
 
 routerApi(app)

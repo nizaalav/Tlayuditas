@@ -7,9 +7,9 @@ const localStrategy = new Strategy(
      async(email, password, done) => {
           try{
           const userTest = [
-               {name: 'josue', email:'user1@emial.com', password: '$2b$10$t6Lfge/s3vbB6HJV9jhifeQ1DDMUM0cxr2La9jwxNg1NKsr4pEg/2', rol: 'admi1'},
-               {name: 'alan', email:'adm@emial.com', password: '$2b$10$t6Lfge/s3vbB6HJV9jhifeQ1DDMUM0cxr2La9jwxNg1NKsr4pEg/2', rol: 'user' },
-               {name: 'oscar', email:'user2@emial.com', password: '$2b$10$t6Lfge/s3vbB6HJV9jhifeQ1DDMUM0cxr2La9jwxNg1NKsr4pEg/2' , rol: 'user2'},
+               {name: 'Dara', email:'user1@mail.com', password: '$2b$10$t6Lfge/s3vbB6HJV9jhifeQ1DDMUM0cxr2La9jwxNg1NKsr4pEg/2', rol: 'admi1'},
+               {name: 'Niza ', email:'admin@email.com', password: '$2b$10$t6Lfge/s3vbB6HJV9jhifeQ1DDMUM0cxr2La9jwxNg1NKsr4pEg/2', rol: 'user' },
+               {name: 'Diana ', email:'user2@mail.com', password: '$2b$10$t6Lfge/s3vbB6HJV9jhifeQ1DDMUM0cxr2La9jwxNg1NKsr4pEg/2' , rol: 'user2'},
 
           ]
 
